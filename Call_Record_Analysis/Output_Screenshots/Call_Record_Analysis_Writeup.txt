@@ -1,0 +1,11 @@
+1. I have created the Call_Record_Analysis database and then created the collection called call_data.
+
+2. Imported the call_data.json into test database call_data collection using the command,
+
+    mongoimport call_data.json -d Call_Record -c call_data --drop --jsonArray
+
+3. Then I have inserted the new document into call_data collection.
+
+4. Counted the number of documents which have roaming is true.
+
+5. Counted the number of documents which have call_duration greater than 10 minutes.

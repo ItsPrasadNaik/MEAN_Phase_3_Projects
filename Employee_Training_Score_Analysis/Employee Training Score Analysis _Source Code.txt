@@ -1,0 +1,37 @@
+> mongoimport C:\Users\nprasad\Downloads\employee_data.json -d Employee -c Details --drop --jsonArray
+
+> mongo;
+
+> use Employee;
+
+> db.Details.find({"term1":{$lt:37}}).count();
+18
+
+> db.Details.aggregate([{$group:{_id:"prasad",avg:{$avg:"$term1"}}}]);
+{ "_id" : "prasad", "avg" : 49.813403645707005 }
+
+> db.Details.find({"term1":{$gt:37},"term2":{$gt:37},"term3":{$gt:37}}).count();
+8
+
+> db.Details.aggregate({$project:{avg_emp:{$avg:["$term1","$term2","$term3"]}}});
+{ "_id" : 0, "avg_emp" : 6.64069629897912 }
+{ "_id" : 1, "avg_emp" : 61.53989734033458 }
+{ "_id" : 3, "avg_emp" : 32.71345752939455 }
+{ "_id" : 2, "avg_emp" : 31.171409619301276 }
+{ "_id" : 4, "avg_emp" : 67.79878751009093 }
+{ "_id" : 6, "avg_emp" : 27.410873586062618 }
+{ "_id" : 5, "avg_emp" : 27.042133271191545 }
+{ "_id" : 7, "avg_emp" : 66.68311924246402 }
+{ "_id" : 8, "avg_emp" : 37.57225777251449 }
+{ "_id" : 9, "avg_emp" : 69.09509201169463 }
+{ "_id" : 11, "avg_emp" : 82.83638462303753 }
+{ "_id" : 12, "avg_emp" : 51.566826545491665 }
+{ "_id" : 13, "avg_emp" : 91.98315917172745 }
+{ "_id" : 10, "avg_emp" : 54.429045002742946 }
+{ "_id" : 14, "avg_emp" : 35.82195918788698 }
+{ "_id" : 15, "avg_emp" : 39.16669547058058 }
+{ "_id" : 16, "avg_emp" : 40.045584291265214 }
+{ "_id" : 17, "avg_emp" : 50.564572815087615 }
+{ "_id" : 18, "avg_emp" : 76.15468092976988 }
+{ "_id" : 19, "avg_emp" : 46.17779245857398 }
+Type "it" for more

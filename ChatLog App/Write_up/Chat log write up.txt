@@ -1,0 +1,7 @@
+Chat log Application 
+
+
+1.Created a html file for the front end.
+2.The express js act as middleware to the mongo db and the front end.
+3.Stored the Message and UserDatamongodb were the file is stored.
+4.At a time users can log into the chat app and communicate.

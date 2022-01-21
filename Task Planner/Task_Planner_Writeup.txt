@@ -1,0 +1,20 @@
+Task Planner Application
+
+language requirements: nodejs and javascript
+
+This project is all about entering the tasks and deleting the task and listing the tasks which are entered.
+This projext contains the 4 main files and some configuraton files and one data.json file to store the tasks which are entered.
+
+1. app.js is the main file where we call the functions to perform create, delete and list the tasks.
+
+2. We need to enter all the details like TaskID, Employee ID, Employee Name and Task and click on submit task.
+
+3. All the details are stored in data.json file.
+
+4. Whenever the user click on submit task, the command will call the fuction and add the list to the json file.
+
+5. To delete a task user has to enter the Task ID and click on Delete Task button. It will delete the task which are in the data.json file.
+
+6. If the task is not present in the json file or mistyped it will display "The taskID wasn't found!".
+
+7. A list is shown where Task ID, Employee ID, Employee Name, Task are present
